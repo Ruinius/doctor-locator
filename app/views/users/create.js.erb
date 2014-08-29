@@ -1,3 +1,5 @@
-<% @five_closest_doctors.each do |doctor| %>
-  $( '#results' ).append( '<li><%=j doctor.name %>, <%=j doctor.full_street_address %></li>' )
-<% end %>
+if ( $( '#results' ).children().length === 0 ) {
+  <% @five_closest_doctors.each do |doctor| %>
+    $( '#results' ).append( '<li><%=j doctor.name %>, <%=j doctor.full_street_address %></li>' )
+  <% end %>
+}
